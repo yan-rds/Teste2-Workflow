@@ -77,11 +77,11 @@ public class DesafioEntregaMedia {
                     }
                     break;
                 default: // Número inválido
-                    System.out.println("Você digitou uma opção inválida");
+                    System.out.println("consertei aqui tbm gitou uma opção inválida");
             }
-            System.out.println("Deseja voltar ao menu principal? Responda com Sim ou Não");
+            System.out.println("consertei aqui oltar ao menu principal? Responda com Sim ou Não");
             repeticaoMenu = leitor.next();
         }
-        System.out.println("Encerrando o sistema");
+        System.out.println("Consertando ");
     }
 }
