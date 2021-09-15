@@ -2,7 +2,7 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 public class DesafioEntregaMedia {
-    // Branch criada com o nome correto
+    // Branch Feature/RemoverC
 
     public static void main(String[] args) {
         Scanner leitor = new Scanner(System.in);
@@ -30,7 +30,8 @@ public class DesafioEntregaMedia {
         while (repeticaoMenu.equalsIgnoreCase("sim")) {
             System.out.println("Utilize os números indicados para navegar pelo menu");
             System.out.println("1 - Adicionar funcionários");
-            System.out.println("2 - Exibir a lista de funcionários");
+            System.out.println("2 - Remover funcionários");
+            System.out.println("3 - Exibir a lista de funcionários");
             escolhaMenu = leitor.nextInt();
 
             // Estrutura de decisão - Menu
@@ -59,17 +60,28 @@ public class DesafioEntregaMedia {
                         System.out.println("Deseja inserir mais algum funcionário? Responda com Sim ou Não");
                         confirmarADD = leitor.next();
                     break;
-                case 2: // Exibir a lista de funcionários
+                case 2: // Sistema para remover funcionários
+                    System.out.println("Digite o CPF do funcionário que você deseja remover");
+                    cpf = leitor.next();
+                    // Condicional pra verificar se esse usuário está cadastrado
+                    if (cadastro.containsKey(cpf)) {
+                        System.out.println("Funcionário removido: \n" + cadastro.get(cpf));
+                        cadastro.remove(cpf);
+                    } else {
+                        System.out.println("Este funcionário não está cadastrado, confira se digitou corretamente");
+                    }
+                    break;
+                case 3: // Exibir a lista de funcionários
                     for (String referencia : cadastro.values()) {
                         System.out.println(referencia);
                     }
                     break;
                 default: // Número inválido
-                    System.out.println("Você digitou uma opção inválida");
+                    System.out.println("consertei aqui tbm gitou uma opção inválida");
             }
-            System.out.println("Deseja voltar ao menu principal? Responda com Sim ou Não");
+            System.out.println("consertei aqui oltar ao menu principal? Responda com Sim ou Não");
             repeticaoMenu = leitor.next();
         }
-        System.out.println("Encerrando o sistema");
+        System.out.println("Consertando ");
     }
 }
