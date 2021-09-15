@@ -2,7 +2,7 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 public class DesafioEntregaMedia {
-    // Branch criada com o nome correto
+    // Branch Feature/RemoverC
 
     public static void main(String[] args) {
         Scanner leitor = new Scanner(System.in);
